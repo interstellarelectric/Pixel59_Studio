@@ -455,6 +455,6 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("/images/PagePoster-4K/8.jpg");
+  background-image: url("/images/poster/8.jpg");
   min-height: 100%;
 }
