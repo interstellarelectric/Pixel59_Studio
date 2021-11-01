@@ -47,7 +47,7 @@
 </div>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container" id="home">
+<header class="bgimg-1 w3-display-container">
   <!--<div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Pixel59Studio</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Pixel59Studio</span><br>
@@ -144,6 +144,14 @@
       </div>
     </div>
   </div>
+<!-- Like Button-->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+      <h2 class="w3-center"><b>Enjoy my the content?</b></h2>
+      <button type="button" onClick="onClick()">Click me</button>
+      <p>Clicks: <a id="clicks">0</a></p>
+  </div>
+</div>
 <!-- End page content -->
 </div>
 
@@ -191,49 +199,15 @@
 
 
 
-
-
 <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-  }
-  
-  /*google Map*/
-  </script>
+var clicks = 0;
+
+function onClick() {
+  clicks += 1;
+  document.getElementById("clicks").innerHTML = clicks;
+};
+
+</script>
 
 </body>
 </html>
